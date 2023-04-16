@@ -10,10 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CODE_PHONEBOOK_HPP
-#define CODE_PHONEBOOK_HPP
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
 class PhoneBook {
+
+public:
 	char contacts[7][40];
 };
 

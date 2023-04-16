@@ -16,8 +16,10 @@ CC = c++
 
 NAME = phonebook
 
-SRC = PhoneBook.cpp Contact.cpp main.cpp
-HEADER = PhoneBook.hpp Contact.hpp
+SRC = main.cpp Test.cpp Visibility.cpp
+#PhoneBook.cpp Contact.cpp main.cpp
+HEADER = Test.hpp Visibility.hpp
+#PhoneBook.hpp Contact.hpp
 
 OBJ = $(SRC:.cpp=.o)
 
