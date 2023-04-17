@@ -13,8 +13,8 @@
 #include <iostream>
 using namespace std;
 
-#include "Test.hpp"
-#include "Visibility.hpp"
+//#include "Test.hpp"
+//#include "Visibility.hpp"
 #include "Access.hpp"
 
 int main()
