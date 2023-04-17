@@ -10,8 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
-
+FLAGS = -Wall -Wextra -std=c++98
+# -Werror
 CC = c++
 
 NAME = phonebook

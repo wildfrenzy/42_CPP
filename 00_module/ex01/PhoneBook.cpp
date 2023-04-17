@@ -12,14 +12,14 @@
 
 #include "PhoneBook.hpp"
 
-PhoneBook::PhoneBook() : _oldest(0) {
-	std::cout << "Constructor called" << std::endl;
+PhoneBook::PhoneBook() : _oldest(0), _full(0){
+	std::cout << "PB Constructor called" << std::endl;
 }
 PhoneBook::~PhoneBook() {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "PB Destructor called" << std::endl;
 }
 
-Contact PhoneBook::getContact(int i) const {
+Contact& PhoneBook::getContact(int i) const {
 	return this->_contacts[i];
 }
 
@@ -27,9 +27,22 @@ int PhoneBook::getOldest() const {
 	return this->_oldest;
 }
 
-void PhoneBook::setContact(Contact *contacts, int index, std::string firstN, std::string lastN, std::string nick) {
-	//contacts.setIndex(index);
-	contacts->setFirstName(firstN);
-	contacts->setLastName(lastN);
-	contacts->setNickname(nick);
+int PhoneBook::getFull() const {
+	return this->_full;
+}
+
+void PhoneBook::setFull(int i) {
+	this->_full = i;
+}
+
+void PhoneBook::setOldest(int i) {
+	this->_oldest = i;
+}
+
+void PhoneBook::setContact(Contact contacts, std::string firstN, std::string lastN, std::string nick, std::string phone, std::string secret) {
+	contacts.setFirstName(firstN);
+	contacts.setLastName(lastN);
+	contacts.setNickname(nick);
+	contacts.setSecret(secret);
+	contacts.setPhone(phone);
 }

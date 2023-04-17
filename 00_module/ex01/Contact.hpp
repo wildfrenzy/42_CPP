@@ -26,18 +26,24 @@ public:
 	std::string getFirstName() const;
 	std::string getLastName() const;
 	std::string getNickName() const;
+	std::string getPhone() const;
+	std::string getSecret() const;
 
-	//static void setIndex(int i);
+	void setIndex(int i);
 	void setFirstName(std::string first);
 	void setLastName(std::string last);
 	void setNickname(std::string nickname);
+	void setPhone(std::string phone);
+	void setSecret(std::string secret);
 
 private:
-	static int _index;
-	char _first_name[10];
-	char _last_name[10];
-	char _nickname[10];
-
+	static int	_i;
+	int 		_index;
+	std::string	_first_name;
+	std::string	_last_name;
+	std::string	_nickname;
+	std::string	_phone;
+	std::string	_secret;
 };
 
 

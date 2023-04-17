@@ -12,20 +12,20 @@
 
 #include "Contact.hpp"
 
-Contact::Contact() : _first_name(), _last_name(), _nickname() {
-	memset(_first_name, 0 ,10);
-	memset(_last_name, 0 ,10);
-	memset(_nickname, 0 ,10);
-	_index += 1;
-	std::cout << "Constructor called" << std::endl;
+Contact::Contact(){
+	std::cout << "Contact Constructor called" << std::endl;
+	_i += 1;
+	this->_index = _i;
+	std::cout << "index: " << getIndex() << std::endl;
 }
 
 Contact::~Contact() {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << "Contact Destructor called : " << getIndex() << std::endl;
+	//_index -= 1;
 }
 
 int Contact::getIndex() const {
-	return Contact::_index;
+	return this->_index;
 }
 
 std::string Contact::getFirstName() const {
@@ -40,36 +40,54 @@ std::string Contact::getNickName() const {
 	return this->_nickname;
 }
 
-//void Contact::setIndex(int i) {
-//	Contact::_index = i;
-//}
+std::string Contact::getPhone() const {
+	return this->_phone;
+}
 
-int Contact::_index = -1;
+std::string Contact::getSecret() const {
+	return this->_secret;
+}
+
+void Contact::setIndex(int i) {
+	this->_index = i;
+}
+
+int Contact::_i = -1;
 
 void Contact::setFirstName(std::string first) {
-	int i = -1;
+	this->_first_name = first;
+	/*int i = -1;
 	while (first[++i] && i < 9)
 		this->_first_name[i] = first[i];
 	if (first[i] != '\0')
 		this->_first_name[i - 1] = '.';
-	this->_first_name[i] = '\0';
+	this->_first_name[i] = '\0';*/
 }
 
 void Contact::setLastName(std::string last) {
-	int i = -1;
+	this->_last_name = last;
+/*	int i = -1;
 	while (last[++i] && i < 9)
 		this->_last_name[i] = last[i];
 	if (last[i] != '\0')
 		this->_last_name[i - 1] = '.';
-	this->_last_name[i] = '\0';
+	this->_last_name[i] = '\0';*/
 }
 
 void Contact::setNickname(std::string nickname) {
-	int i = -1;
+	this->_nickname = nickname;
+/*	int i = -1;
 	while (nickname[++i] && i < 9)
 		this->_nickname[i] = nickname[i];
 	if (nickname[i] != '\0')
 		this->_nickname[i - 1] = '.';
-	this->_nickname[i] = '\0';
+	this->_nickname[i] = '\0';*/
 }
 
+void Contact::setSecret(std::string secret) {
+	this->_secret = secret;
+}
+
+void Contact::setPhone(std::string phone) {
+	this->_phone = phone;
+}
