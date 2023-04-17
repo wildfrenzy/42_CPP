@@ -9,6 +9,15 @@ using namespace std;
 
 class Comparisons {
 
+public:
+	Comparisons(int v);
+	~Comparisons(void);
+
+	int getFoo(void) const;
+	int compare(Comparisons *other) const;
+
+private:
+	int _foo;
 };
 
 
