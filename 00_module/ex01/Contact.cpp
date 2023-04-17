@@ -13,19 +13,12 @@
 #include "Contact.hpp"
 
 Contact::Contact(){
-	std::cout << "Contact Constructor called" << std::endl;
-	_i += 1;
-	this->_index = _i;
-	std::cout << "index: " << getIndex() << std::endl;
+	_index += 1;
+	//std::cout << "Contact Constructor called" << std::endl;
 }
 
 Contact::~Contact() {
-	std::cout << "Contact Destructor called : " << getIndex() << std::endl;
-	//_index -= 1;
-}
-
-int Contact::getIndex() const {
-	return this->_index;
+	//std::cout << "Contact Destructor called : " << getIndex() << std::endl;
 }
 
 std::string Contact::getFirstName() const {
@@ -48,40 +41,18 @@ std::string Contact::getSecret() const {
 	return this->_secret;
 }
 
-void Contact::setIndex(int i) {
-	this->_index = i;
-}
-
-int Contact::_i = -1;
+int Contact::_index = 0;
 
 void Contact::setFirstName(std::string first) {
 	this->_first_name = first;
-	/*int i = -1;
-	while (first[++i] && i < 9)
-		this->_first_name[i] = first[i];
-	if (first[i] != '\0')
-		this->_first_name[i - 1] = '.';
-	this->_first_name[i] = '\0';*/
 }
 
 void Contact::setLastName(std::string last) {
 	this->_last_name = last;
-/*	int i = -1;
-	while (last[++i] && i < 9)
-		this->_last_name[i] = last[i];
-	if (last[i] != '\0')
-		this->_last_name[i - 1] = '.';
-	this->_last_name[i] = '\0';*/
 }
 
 void Contact::setNickname(std::string nickname) {
 	this->_nickname = nickname;
-/*	int i = -1;
-	while (nickname[++i] && i < 9)
-		this->_nickname[i] = nickname[i];
-	if (nickname[i] != '\0')
-		this->_nickname[i - 1] = '.';
-	this->_nickname[i] = '\0';*/
 }
 
 void Contact::setSecret(std::string secret) {

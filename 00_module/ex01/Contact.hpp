@@ -22,14 +22,12 @@ public:
 	Contact(void);
 	~Contact(void);
 
-	int getIndex() const;
 	std::string getFirstName() const;
 	std::string getLastName() const;
 	std::string getNickName() const;
 	std::string getPhone() const;
 	std::string getSecret() const;
 
-	void setIndex(int i);
 	void setFirstName(std::string first);
 	void setLastName(std::string last);
 	void setNickname(std::string nickname);
@@ -37,14 +35,12 @@ public:
 	void setSecret(std::string secret);
 
 private:
-	static int	_i;
-	int 		_index;
+	static int	_index;
 	std::string	_first_name;
 	std::string	_last_name;
 	std::string	_nickname;
 	std::string	_phone;
 	std::string	_secret;
 };
-
 
 #endif

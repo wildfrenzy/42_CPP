@@ -22,18 +22,12 @@ public:
 	PhoneBook(void);
 	~PhoneBook(void);
 
-	Contact	&getContact(int i) const;
-	int		getOldest() const;
-	int		getFull() const;
-
-	void	setContact(Contact contacts, std::string firstN, std::string lastN, std::string nick, std::string phone, std::string secret);
-	void	setOldest(int i);
-	void	setFull(int i);
+	Contact &getContact(int i);
+	void setContact(Contact *contacts, std::string firstN, std::string lastN,
+					std::string nick, std::string phone, std::string secret);
 
 private:
-	Contact	_contacts[7];
-	int		_oldest;
-	int		_full;
+	Contact _contacts[8];
 };
 
 #endif
