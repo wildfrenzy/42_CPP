@@ -13,10 +13,25 @@
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 
+#include "Contact.hpp"
+
 class PhoneBook {
 
 public:
-	char contacts[7][40];
+
+	PhoneBook(void);
+	~PhoneBook(void);
+
+	Contact	getContact(int i) const;
+	int		getOldest() const;
+
+	void	setContact(Contact *contacts, int index, std::string firstN, std::string lastN, std::string nick);
+	void	setOldest(int i);
+
+private:
+	Contact	_contacts[7];
+	int		_oldest;
+
 };
 
 #endif

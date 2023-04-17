@@ -10,14 +10,35 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #ifndef CODE_CONTACT_HPP
 #define CODE_CONTACT_HPP
 
+#include <iostream>
 
 class Contact {
-	char *contact;
+
+public:
+
+	Contact(void);
+	~Contact(void);
+
+	int getIndex() const;
+	std::string getFirstName() const;
+	std::string getLastName() const;
+	std::string getNickName() const;
+
+	//static void setIndex(int i);
+	void setFirstName(std::string first);
+	void setLastName(std::string last);
+	void setNickname(std::string nickname);
+
+private:
+	static int _index;
+	char _first_name[10];
+	char _last_name[10];
+	char _nickname[10];
+
 };
 
 
-#endif //CODE_CONTACT_HPP
+#endif
