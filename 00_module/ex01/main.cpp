@@ -56,7 +56,7 @@ void	add(PhoneBook *phoneBook)
 
 void print_field(std::string str)
 {
-	std::cout << std::setw(11);
+	std::cout << std::setw(10);
 	if (str.length() > 10)
 	{
 		str.resize(9);
@@ -73,7 +73,7 @@ void search(PhoneBook *phoneBook)
 
 	while (++i < 8)
 	{
-		std::cout << std::setw(11);
+		std::cout << std::setw(10);
 		tmp = phoneBook->getContact(i);
 		std::cout << i << "|";
 		print_field(tmp.getFirstName());

@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   tests.cpp                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/18 11:52:22 by nmaliare          #+#    #+#             */
-/*   Updated: 2023/04/18 11:52:22 by nmaliare         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 // ************************************************************************** //
 //                                                                            //
 //                tests.cpp for GlobalBanksters United                        //
@@ -24,7 +12,9 @@
 #include <functional>
 #include "Account.hpp"
 
+
 int		main( void ) {
+
 	typedef std::vector<Account::t>							  accounts_t;
 	typedef std::vector<int>								  ints_t;
 	typedef std::pair<accounts_t::iterator, ints_t::iterator> acc_int_t;
@@ -72,6 +62,7 @@ int		main( void ) {
 
 	return 0;
 }
+
 
 // ************************************************************************** //
 // vim: set ts=4 sw=4 tw=80 noexpandtab:                                      //
