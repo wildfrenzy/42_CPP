@@ -15,12 +15,13 @@ public:
 
 	void		attack();
 	std::string	getName() const;
-	Weapon		getWeapon() const;
-	void		setWeapon(Weapon type);
+	Weapon*		getWeapon() const;
+	void		setWeapon(Weapon& type);
 
 private:
 	std::string	_name;
-	Weapon		_weapon;
+	Weapon*		_weapon;
+
 };
 
 #endif

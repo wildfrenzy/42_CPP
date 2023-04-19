@@ -4,7 +4,7 @@
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string name, Weapon type) : _name(name), _weapon(type) {
+HumanA::HumanA(std::string name, Weapon& type) : _name(name), _weapon(type) {
 
 }
 

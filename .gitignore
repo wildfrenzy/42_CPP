@@ -1,1 +1,3 @@
 .idea
+./ex02/*.o
+./ex02/brain
