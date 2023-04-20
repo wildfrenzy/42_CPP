@@ -10,14 +10,14 @@
 #                                                                              #
 # **************************************************************************** #
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
-
+FLAGS = -Wall -Wextra  -std=c++98
+#-Werror
 CC = c++
 
-NAME = horde
+NAME = sed
 
-SRC = main.cpp Zombie.cpp zombieHorde.cpp
-HEADER = Zombie.hpp
+SRC = main.cpp
+#HEADER =
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -29,11 +29,11 @@ BLUE        = \033[1;34m
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(HEADER)
+$(NAME): $(OBJ) #$(HEADER)
 	@$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 	@printf "$(GREEN)$(NAME) successfully compiled !$(NOC)\n"
 
-$(OBJ): %.o:%.cpp $(HEADER)
+$(OBJ): %.o:%.cpp # $(HEADER)
 	@$(CC) $(FLAGS) -c $< -o $@
 	@printf "$(GREEN)[\342\234\205] $(notdir $@)\n";
 
