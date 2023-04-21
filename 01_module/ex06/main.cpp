@@ -52,7 +52,7 @@ int main(int ac, char *av[])
 				std::cout << "[ ERROR ]" << std::endl;
 				harl.complain("ERROR");
 				break;
-			case 4:
+			default:
 				harl.complain("whatever");
 				break;
 		}
