@@ -20,7 +20,7 @@ public:
 	Fixed();
 	~Fixed();
 	Fixed(const Fixed &num); // copy constructor
-	Fixed& operator=(const Fixed &);
+	Fixed& operator=(const Fixed &num);
 	int getRawBits( void ) const;
 	void setRawBits( int const raw );
 

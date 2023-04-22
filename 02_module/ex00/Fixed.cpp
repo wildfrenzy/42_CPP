@@ -20,11 +20,12 @@ Fixed::~Fixed() {
 }
 Fixed::Fixed(const Fixed &num) {
 	std::cout<< "Copy constructor called" << std::endl;
-	this->_val = num._val; // ?
+	this->_val = num.getRawBits(); // ?
 }
 
-Fixed &Fixed::operator=(const Fixed &) {
+Fixed &Fixed::operator=(const Fixed &num) {
 	std::cout<< "Copy assignment operator called" << std::endl;
+	this->_val = num.getRawBits();
 	return *this;
 }
 
