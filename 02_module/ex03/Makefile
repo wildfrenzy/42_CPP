@@ -16,8 +16,8 @@ CC = c++
 
 NAME = fixed
 
-SRC = main.cpp bsp.cpp Fixed.cpp
-HEADER = Fixed.hpp
+SRC = main.cpp bsp.cpp Fixed.cpp Point.cpp
+HEADER = Fixed.hpp Point.hpp
 
 OBJ = $(SRC:.cpp=.o)
 
