@@ -6,34 +6,20 @@
 /*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 16:29:26 by nmaliare          #+#    #+#             */
-/*   Updated: 2023/04/22 16:29:26 by nmaliare         ###   ########.fr       */
+/*   Updated: 2023/04/27 19:46:20 by nmaliare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Point.hpp"
 
 int main( void ) {
 
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	Fixed const c( Fixed( 5.05f ) / Fixed( 2 ) );
-	Fixed const d( Fixed( 5.05f ) - Fixed( 2 ) );
-	Fixed const e( Fixed( 5.05f ) + Fixed( 2 ) );
+	Point const a(2, 2);
+	Point const b(5, 7);
+	Point const c(9, 4);
+	Point const p(5, 6);
 
-	std::cout << b << std::endl;
-	std::cout << c << std::endl;
-	std::cout << d << std::endl;
-	std::cout << e << std::endl;
-
-	std::cout << "a: " << std::endl;
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-
-	std::cout << b << std::endl;
-	std::cout << Fixed::max(a, b) << std::endl;
+	bsp(a, b, c , p) ? (std::cout << "ok" << std::endl) : (std::cout << "ko" << std::endl);
 
 	return 0;
 }
