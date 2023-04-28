@@ -30,7 +30,8 @@ DiamondTrap::DiamondTrap(const std::string &name) {
 	this->_attack = FlagTrap::getAttack();
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &dia) {
+DiamondTrap::DiamondTrap(const DiamondTrap &dia){
+	std::cout << "DiamondTrap Copy Constructor called" << std::endl;
 	if (this != &dia)
 		*this = dia;
 }
@@ -50,9 +51,9 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &dia) {
 	return *this;
 }
 
-void DiamondTrap::attack(const std::string &target) {
+/*void DiamondTrap::attack(const std::string &target) {
 	this->ScavTrap::attack(target);
-}
+}*/
 
 void DiamondTrap::whoAmI() {
 	std::cout << "I am " << this->_name << ", my ClapTrap is " << this->ClapTrap::_name << std::endl;

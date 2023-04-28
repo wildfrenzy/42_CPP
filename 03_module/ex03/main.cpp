@@ -17,41 +17,29 @@
 
 int	main()
 {
-/*	DiamondTrap d;
-	std::cout << std::endl;
-	DiamondTrap a( "Moulinette" );
-	std::cout << std::endl;
-	DiamondTrap b( "Student" );
-	std::cout << std::endl;
-	d = b;
-	std::cout << std::endl;
-	d.attack("Pisciner");
-	std::cout << std::endl;
-	a.whoAmI();
-	std::cout << std::endl;*/
 
-	DiamondTrap moulinette("Moulinette");
-	std::cout << std::endl;
+	//DiamondTrap moulinette("Moulinette");
+	//std::cout << std::endl;
 	DiamondTrap student("Student");
 	std::cout << std::endl;
 	DiamondTrap random;
 	std::cout << std::endl;
 	random = student;
-	ScavTrap pisciner("Pisciner");
+	//ScavTrap pisciner("Pisciner");
 
-	moulinette.attack("Student");
-	moulinette.highFivesGuys();
-	pisciner.guardGate();
-	pisciner.attack("Moulinette");
+	//moulinette.attack("Student");
+	//moulinette.highFivesGuys();
+	//pisciner.guardGate();
+	//pisciner.attack("Moulinette");
 	student.takeDamage(142);
 	student.attack("Bocal");
 	student.beRepaired(2);
 	student.takeDamage(10);
 	random.attack("Moulinette");
-	moulinette.whoAmI();
+	student.whoAmI();
 
-	std::cout << BLUE"Mouli" RES " stats:\nhealth: " << moulinette.getHealth()
-	<< "\nenergy: " << moulinette.getEnergy() << std::endl;
+	//std::cout << BLUE"Mouli" RES " stats:\nhealth: " << moulinette.getHealth()
+	//<< "\nenergy: " << moulinette.getEnergy() << std::endl;
 
 	std::cout << BLUE"Student" RES " stats:\nhealth: " << student.getHealth()
 			  << "\nenergy: " << student.getEnergy() << std::endl;
