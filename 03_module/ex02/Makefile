@@ -14,10 +14,10 @@ FLAGS = -Wall -Wextra -std=c++98
 #-Werror
 CC = c++
 
-NAME = ScavTrap
+NAME = FlagTrap
 
-SRC = main.cpp ClapTrap.cpp ScavTrap.cpp
-HEADER = ClapTrap.hpp ScavTrap.hpp
+SRC = main.cpp ClapTrap.cpp ScavTrap.cpp FlagTrap.cpp
+HEADER = ClapTrap.hpp ScavTrap.hpp FlagTrap.hpp
 
 OBJ = $(SRC:.cpp=.o)
 

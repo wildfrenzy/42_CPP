@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "FlagTrap.hpp"
 #include "ScavTrap.hpp"
 
 #define BLUE "\x1b[1;36m"
@@ -17,13 +18,16 @@
 
 int	main()
 {
-	ScavTrap moulinette("Moulinette");
-	ScavTrap student("Student");
-	ScavTrap random;
+	FlagTrap moulinette("Moulinette");
+	FlagTrap student("Student");
+	FlagTrap random;
 	random = student;
+	ScavTrap pisciner("Pisciner");
 
 	moulinette.attack("Student");
-	moulinette.guardGate();
+	moulinette.highFivesGuys();
+	pisciner.guardGate();
+	pisciner.attack("Moulinette");
 	student.takeDamage(142);
 	student.attack("Bocal");
 	student.beRepaired(2);

@@ -17,24 +17,36 @@
 #define RED "\x1b[1;31m"
 #define RES "\x1b[0m"
 
-ClapTrap::ClapTrap() :_health(100), _energy(50), _attack(20) {
+ClapTrap::ClapTrap() :_health(10), _energy(10), _attack(10) {
 	std::cout<< "ClapTrap Default constructor called" << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string& name) : _name(name), _health(100), _energy(50), _attack(20){
-	std::cout<< "ClapTrap Default constructor for " << name <<" called" << std::endl;
+ClapTrap::ClapTrap(const std::string& name) : _name(name), _health(10), _energy(10), _attack(10){
+	std::cout<< "ClapTrap constructor for " << name <<" called" << std::endl;
 }
 ClapTrap::~ClapTrap() {
 	std::cout<< "ClapTrap Destructor for " << this->getName() <<" called" << std::endl;
 }
 ClapTrap::ClapTrap(const ClapTrap &clap) {
-	std::cout<< "ClapTrap Copy constructor called" << std::endl;
+	std::cout<< "ClapTrap Copy constructor for " << clap.getName() << " called" << std::endl;
 	if (this != &clap)
 		*this = clap;
 }
 
 void ClapTrap::setName(const std::string &name) {
 	this->_name = name;
+}
+
+void ClapTrap::setAttack(const unsigned int ad) {
+	this->_attack = ad;
+}
+
+void ClapTrap::setEnergy(const unsigned int en) {
+	this->_energy = en;
+}
+
+void ClapTrap::setHealth(const unsigned int hp) {
+	this->_health = hp;
 }
 
 unsigned int ClapTrap::getAttack() const { return this->_attack; }
@@ -58,10 +70,9 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &clap) {
 void ClapTrap::attack(const std::string &target) {
 	if (this->_energy > 0)
 	{
-		std::cout << "ClapTrap " BLUE << this->getName() << RES" attacks "YELLOW <<
+		std::cout << "ClapTrap " BLUE << this->getName() << RES" attacks " YELLOW <<
 			target << RES", causing " RED << this->getAttack() << RES" points of damage!" << std::endl;
 		this->_energy -= 1;
-		//ClapTrap(target).takeDamage(this->getAttack());
 	}
 	else
 		std::cout << "ClapTrap " BLUE << this->getName() << RES" doesn't have energy!" << std::endl;
