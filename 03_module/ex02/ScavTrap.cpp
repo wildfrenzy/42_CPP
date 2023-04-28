@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 18:03:48 by nmaliare          #+#    #+#             */
-/*   Updated: 2023/04/28 18:03:48 by nmaliare         ###   ########.fr       */
+/*   Created: 2023/04/28 18:11:32 by nmaliare          #+#    #+#             */
+/*   Updated: 2023/04/28 18:11:32 by nmaliare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,11 @@ void ScavTrap::guardGate() {
 
 ScavTrap::ScavTrap() {
 	std::cout<< "ScavTrap Default constructor called" << std::endl;
-/*	this->setHealth(100);
-	this->setEnergy(50);
-	this->setAttack(20);*/
 }
 
 ScavTrap::ScavTrap(const std::string &name) {
-	std::cout<< "ScavTrap constructor for " << name <<" called" << std::endl;
+	std::cout<< "ScavTrap Default constructor for " << name <<" called" << std::endl;
 	this->setName(name);
-	this->setHealth(100);
-	this->setEnergy(50);
-	this->setAttack(20);
 }
 
 ScavTrap::~ScavTrap() {

@@ -26,12 +26,8 @@ public:
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 
+	std::string getName(void)const;
 	void		setName(const std::string &name);
-	void		setHealth(const unsigned int hp);
-	void		setEnergy(const unsigned int en);
-	void		setAttack(const unsigned int ad);
-
-	std::string			getName(void)const;
 	unsigned int 		getHealth(void)const;
 	unsigned int 		getEnergy(void)const;
 	unsigned int 		getAttack(void)const;
