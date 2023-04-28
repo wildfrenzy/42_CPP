@@ -48,5 +48,8 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &scav) {
 	if(this == &scav)
 		return *this;
 	this->setName(scav.getName());
+	this->setAttack(scav.getAttack());
+	this->setEnergy(scav.getEnergy());
+	this->setHealth(scav.getHealth());
 	return *this;
 }
