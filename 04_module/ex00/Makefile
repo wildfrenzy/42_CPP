@@ -16,8 +16,8 @@ CC = c++
 
 NAME = Animal
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp
-HEADER = Animal.hpp Dog.hpp Cat.hpp
+SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
+HEADER = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp
 OBJ = $(SRC:.cpp=.o)
 
 # COLORS
