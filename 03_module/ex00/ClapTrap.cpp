@@ -17,7 +17,7 @@
 #define RED "\x1b[1;31m"
 #define RES "\x1b[0m"
 
-ClapTrap::ClapTrap() {
+ClapTrap::ClapTrap() : _health(10), _energy(10), _attack(10) {
 	std::cout<< "Default constructor called" << std::endl;
 }
 
@@ -57,7 +57,6 @@ void ClapTrap::attack(const std::string &target) {
 		std::cout << "ClapTrap " BLUE << this->getName() << RES" attacks "YELLOW <<
 			target << RES", causing " RED << this->getAttack() << RES" points of damage!" << std::endl;
 		this->_energy -= 1;
-		//ClapTrap(target).takeDamage(this->getAttack());
 	}
 	else
 		std::cout << "ClapTrap " BLUE << this->getName() << RES" doesn't have energy!" << std::endl;

@@ -35,14 +35,17 @@ int	main()
 	student.attack("Bocal");
 	student.beRepaired(2);
 	student.takeDamage(10);
+	std::cout << std::endl;
 	random.attack("Moulinette");
+	std::cout << std::endl;
 	student.whoAmI();
+	std::cout << std::endl;
 
 	//std::cout << BLUE"Mouli" RES " stats:\nhealth: " << moulinette.getHealth()
 	//<< "\nenergy: " << moulinette.getEnergy() << std::endl;
 
-	std::cout << BLUE"Student" RES " stats:\nhealth: " << student.getHealth()
-			  << "\nenergy: " << student.getEnergy() << std::endl;
+//	std::cout << BLUE"Student" RES " stats:\nhealth: " << student.getHealth()
+//			  << "\nenergy: " << student.getEnergy() << std::endl;
 
 	return 0;
 }

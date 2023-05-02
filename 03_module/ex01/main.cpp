@@ -12,29 +12,26 @@
 
 #include "ScavTrap.hpp"
 
-#define BLUE "\x1b[1;36m"
-#define RES "\x1b[0m"
-
 int	main()
 {
 	ScavTrap moulinette("Moulinette");
+	std::cout << std::endl;
 	ScavTrap student("Student");
+	std::cout << std::endl;
 	ScavTrap random;
 	random = student;
+	std::cout << std::endl;
 
 	moulinette.attack("Student");
 	moulinette.guardGate();
+	std::cout << std::endl;
 	student.takeDamage(142);
 	student.attack("Bocal");
 	student.beRepaired(2);
 	student.takeDamage(10);
+	std::cout << std::endl;
 	random.attack("Moulinette");
-
-	std::cout << BLUE"Mouli" RES " stats:\nhealth: " << moulinette.getHealth()
-	<< "\nenergy: " << moulinette.getEnergy() << std::endl;
-
-	std::cout << BLUE"Student" RES " stats:\nhealth: " << student.getHealth()
-			  << "\nenergy: " << student.getEnergy() << std::endl;
+	std::cout << std::endl;
 
 	return 0;
 }

@@ -15,12 +15,10 @@
 
 #include <iostream>
 
-#include "FlagTrap.hpp"
+#include "FragTrap.hpp"
 #include "ScavTrap.hpp"
 
-///TODO rename FlagTrap to FragTrap
-
-class DiamondTrap : public FlagTrap, public ScavTrap{
+class DiamondTrap : public FragTrap, public ScavTrap{
 public:
 	DiamondTrap();
 	~DiamondTrap();
@@ -28,7 +26,6 @@ public:
 	DiamondTrap(const DiamondTrap &dia);
 	DiamondTrap& operator=(const DiamondTrap &dia);
 
-	//using ScavTrap::attack;
 	void attack(const std::string &target);
 	void whoAmI();
 private:
