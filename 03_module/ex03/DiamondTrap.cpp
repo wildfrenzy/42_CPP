@@ -51,9 +51,9 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &dia) {
 	return *this;
 }
 
-/*void DiamondTrap::attack(const std::string &target) {
-	this->ScavTrap::attack(target);
-}*/
+void DiamondTrap::attack(const std::string &target) {
+	ScavTrap::attack(target);
+}
 
 void DiamondTrap::whoAmI() {
 	std::cout << "I am " << this->_name << ", my ClapTrap is " << this->ClapTrap::_name << std::endl;

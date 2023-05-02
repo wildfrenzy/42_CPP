@@ -28,8 +28,8 @@ public:
 	DiamondTrap(const DiamondTrap &dia);
 	DiamondTrap& operator=(const DiamondTrap &dia);
 
-	using ScavTrap::attack;
-	//void attack(const std::string &target);
+	//using ScavTrap::attack;
+	void attack(const std::string &target);
 	void whoAmI();
 private:
 	std::string _name;

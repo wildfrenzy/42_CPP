@@ -25,6 +25,7 @@ public:
 	~ScavTrap();
 
 	void guardGate();
+	//add attack
 };
 
 
