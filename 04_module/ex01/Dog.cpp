@@ -18,16 +18,18 @@ Dog::Dog() {
 	this->_brain = new Brain();
 }
 
-Dog::Dog(const Dog &cat) {
-	std::cout<< "Dog copy constructor called" << std::endl;
-	if (this != &cat)
-		*this = cat;
+Dog::Dog(const Dog &dog) {
+	std::cout<< YELLOW "Dog copy constructor called" RES << std::endl;
+	if (this != &dog)
+		this->_brain = new Brain(*dog.getBrain());
 }
 
-Dog &Dog::operator=(const Dog &cat) {
-	if(this == &cat)
+Dog &Dog::operator=(const Dog &dog) {
+	std::cout<< YELLOW "Dog assignment operator called" RES << std::endl;
+	if(this == &dog)
 		return *this;
-	this->type = "Dog";
+	this->type = dog.getType();
+	this->_brain = dog.getBrain();
 	return *this;
 }
 
