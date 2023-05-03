@@ -53,14 +53,18 @@ int main()
 		Cat cat2 = Cat(*cat);
 		std::cout << "Cat [2] " << cat2.getBrain()->getIdea(1) << std::endl;
 		cat->getBrain()->setIdea(0, meow);
-		std::cout << "Cat [2] " << cat->getBrain()->getIdea(0) << std::endl;
+		std::cout << "Cat [1] " << cat->getBrain()->getIdea(0) << std::endl;
+		std::cout << "Cat [2] " << cat2.getBrain()->getIdea(0) << std::endl;
 
 		std::cout << std::endl;
 		std::cout << RED "TEST copy 2" RES << std::endl;
 		std::cout << std::endl;
 
-		Cat cat3 = cat2;
+		Cat cat3;
+		cat3 = cat2;
+		cat3.getBrain()->setIdea(0, meow);
 		std::cout << "Cat [3] " << cat3.getBrain()->getIdea(0) << std::endl;
+		std::cout << "Cat [2] " << cat2.getBrain()->getIdea(0) << std::endl;
 		std::cout << "Cat [3] " << cat3.getBrain()->getIdea(1) << std::endl;
 
 		std::cout << std::endl;

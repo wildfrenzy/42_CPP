@@ -23,7 +23,7 @@ public:
 	~Brain();
 
 	std::string	getIdea(int index) const;
-	void		setIdea(int index, std::string& idea);
+	void		setIdea(int index, std::string idea);
 
 protected:
 	std::string ideas[100];

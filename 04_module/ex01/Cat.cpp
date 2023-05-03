@@ -20,14 +20,8 @@ Cat::Cat() {
 
 Cat::Cat(const Cat &cat) {
 	std::cout<< YELLOW "Cat copy constructor called" RES << std::endl;
-	Brain *cats = cat.getBrain();
-	std::string tmp;
 	if (this != &cat) {
-		this->_brain = new Brain(*cats);//new Brain(*cat.getBrain());
-		for (int i = 0; i < 100 && !(cats->getIdea(i).empty()); ++i) {
-			tmp = cats->getIdea(i);
-			this->_brain->setIdea(i, tmp);
-		}
+		*this = cat;
 	}
 }
 
@@ -36,7 +30,7 @@ Cat &Cat::operator=(const Cat &cat) {
 	if(this == &cat)
 		return *this;
 	this->type = cat.type;
-	this->_brain = cat.getBrain();
+	this->_brain = new Brain(*cat.getBrain());
 	return *this;
 }
 
