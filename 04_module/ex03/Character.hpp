@@ -15,19 +15,12 @@
 
 #include "AMateria.hpp"
 
-class Character {
-public:
-
-protected:
-	AMateria materias[4];
-};
-
 class ICharacter {
 public:
 	//ICharacter();
 //	ICharacter(const ICharacter &ch);
 	//ICharacter& operator=(const ICharacter &ch);
-	virtual ~ICharacter();
+	virtual ~ICharacter(){}
 
 	virtual std::string const & getName() const = 0;
 	virtual void equip(AMateria* m) = 0;
@@ -35,5 +28,19 @@ public:
 	virtual void use(int idx, ICharacter& target) = 0;
 };
 
+class Character {
+public:
+	Character();
+	Character(const Character &ch);
+	Character& operator=(const Character &ch);
+	~Character();
+
+	std::string const & getName() const;
+	void equip(AMateria* m);
+	void unequip(int idx);
+	void use(int idx, ICharacter& target);
+protected:
+	AMateria* inventory[4];
+};
 
 #endif
