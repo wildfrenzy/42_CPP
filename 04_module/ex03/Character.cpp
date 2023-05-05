@@ -12,21 +12,22 @@
 
 #include "Character.hpp"
 
-ICharacter::ICharacter() {
-	std::cout<< "ICharacter default constructor called" << std::endl;
+Character::Character(std::string name) : name(name) {
+	std::cout << "Character default constructor called" << std::endl;
 }
 
-ICharacter::ICharacter(const ICharacter &ch) {
-	std::cout<< "ICharacter copy constructor called" << std::endl;
+Character::Character(const Character &ch) {
+	std::cout << "Character copy constructor called" << std::endl;
 	if (this != &ch)
 		*this = ch;
 }
 
-ICharacter &ICharacter::operator=(const ICharacter &ch) {
-	std::cout<< "ICharacter assigning operator called" << std::endl;
+Character &Character::operator=(const Character &ch) {
+	std::cout << "Character = operator called" << std::endl;
 	if (this == &ch)
 		return *this;
-	*this = ch;
+	this->name = ch.name;
+//	this->inventory = ch.clone(); // clone all 4, not 1
 	return *this;
 }
 

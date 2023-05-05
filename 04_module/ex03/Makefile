@@ -17,7 +17,7 @@ CC = c++
 NAME = materia
 
 SRC = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp
-HEADER =  AMateria.hpp Character.hpp Cure.hpp Ice.hpp
+HEADER =  AMateria.hpp Character.hpp ICharacter.hpp Cure.hpp Ice.hpp IMateriaSource.hpp
 OBJ = $(SRC:.cpp=.o)
 
 # COLORS

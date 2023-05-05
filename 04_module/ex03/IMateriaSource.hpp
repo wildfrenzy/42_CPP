@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Character.hpp                                      :+:      :+:    :+:   */
+/*    IMateriaSource.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/04 15:51:36 by nmaliare          #+#    #+#             */
-/*   Updated: 2023/05/04 15:51:36 by nmaliare         ###   ########.fr       */
+/*   Created: 2023/05/05 17:55:38 by nmaliare          #+#    #+#             */
+/*   Updated: 2023/05/05 17:55:38 by nmaliare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHARACTER_HPP
-#define CHARACTER_HPP
+#ifndef IMATERIASOURCE_HPP
+#define IMATERIASOURCE_HPP
 
 #include "AMateria.hpp"
-#include "ICharacter.hpp"
 
-class Character :public ICharacter, public AMateria{
+class IMateriaSource{
 public:
-	Character(std::string name);
-	Character(const Character &ch);
-	Character& operator=(const Character &ch);
-	~Character();
-
-	std::string const & getName() const;
-	void equip(AMateria* m);
-	void unequip(int idx);
-	void use(int idx, ICharacter& target);
-
-private:
-	AMateria* _inventory[4];
-	std::string _name;
+	virtual ~IMateriaSource() {}
+	virtual void learnMateria(AMateria*) = 0;
+	virtual AMateria* createMateria(std::string const & type) = 0;
 };
 
 #endif
