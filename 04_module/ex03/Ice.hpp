@@ -22,8 +22,8 @@ public:
 	Ice& operator=(const Ice &ice);
 	~Ice();
 
-	void use(ICharacter &target);
-
+	void	use(ICharacter &target);
+	Ice*	clone() const;
 };
 
 #endif

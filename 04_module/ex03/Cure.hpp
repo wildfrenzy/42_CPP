@@ -22,7 +22,8 @@ public:
 	Cure& operator=(const Cure &cure);
 	~Cure();
 
-	void use(ICharacter &target);
+	void	use(ICharacter &target);
+	Cure*	clone() const;
 };
 
 #endif
