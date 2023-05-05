@@ -12,31 +12,12 @@
 
 #include "AMateria.hpp"
 
-AMateria::AMateria() {
-	std::cout<< "AMateria default constructor called" << std::endl;
-}
-AMateria::AMateria(const std::string &type) {
+AMateria::AMateria(const std::string &type) : _type(type) {
 	std::cout<< "AMateria constructor for "<< type << " called" << std::endl;
-	this->type = type;
 }
 
-const std::string &AMateria::getType() const {return this->type;}
+const std::string &AMateria::getType() const {return this->_type;}
 
 AMateria::~AMateria() {
 	std::cout<< "AMateria destructor called" << std::endl;
 }
-
-AMateria::AMateria(const AMateria &mat) {
-	std::cout<< "AMateria copy constructor called" << std::endl;
-	if (this != &mat)
-		*this = mat;
-}
-
-AMateria &AMateria::operator=(const AMateria &mat) {
-	std::cout<< "AMateria assigning operator called" << std::endl;
-	if (this == &mat)
-		return *this;
-	*this = mat;
-	return *this;
-}
-

@@ -23,20 +23,15 @@
 
 class AMateria {
 public:
-
-	AMateria();
 	AMateria(std::string const & type);
-
-	AMateria(const AMateria &mat);
-	AMateria& operator=(const AMateria &mat);
 	virtual ~AMateria();
 
 	std::string const & getType() const;
 	virtual AMateria* clone() const = 0;
 	virtual void use(ICharacter& target);
 
-protected:
-	std::string type;
+private:
+	std::string _type;
 };
 
 
