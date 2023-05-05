@@ -21,3 +21,7 @@ const std::string &AMateria::getType() const {return this->_type;}
 AMateria::~AMateria() {
 	std::cout<< "AMateria destructor called" << std::endl;
 }
+
+void AMateria::use(ICharacter &target) {
+	std::cout << BLUE "AMateria is trying to be useful for "<< target.getName() << "" RES << std::endl;
+}

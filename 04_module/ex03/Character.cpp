@@ -6,7 +6,7 @@
 /*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 15:57:37 by nmaliare          #+#    #+#             */
-/*   Updated: 2023/05/04 15:57:40 by nmaliare         ###   ########.fr       */
+/*   Updated: 2023/05/05 21:44:49 by nmaliare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ Character &Character::operator=(const Character &ch) {
 	this->_name = ch._name;
 	for (int i = 0; i < 4; i++) {
 		delete this->_inventory[i];
+		this->_inventory[i] = NULL;
 	}
 	for (int i = 0; i < 4; i++) {
 		if (ch._inventory[i])
@@ -59,7 +60,10 @@ const std::string &Character::getName() const {return this->_name;}
 void Character::equip(AMateria *m) {
 	for (int i = 0; i < 4; i++) {
 		if (!this->_inventory[i])
+		{
 			this->_inventory[i] = m;
+			break;
+		}
 	}
 }
 
