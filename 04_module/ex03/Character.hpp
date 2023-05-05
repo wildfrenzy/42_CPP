@@ -16,8 +16,9 @@
 #include "AMateria.hpp"
 #include "ICharacter.hpp"
 
-class Character :public ICharacter, public AMateria{
+class Character : public ICharacter{
 public:
+	Character();
 	Character(std::string name);
 	Character(const Character &ch);
 	Character& operator=(const Character &ch);
@@ -29,8 +30,8 @@ public:
 	void use(int idx, ICharacter& target);
 
 private:
-	AMateria* _inventory[4];
-	std::string _name;
+	AMateria*	_inventory[4];
+	std::string	_name;
 };
 
 #endif

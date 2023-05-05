@@ -12,8 +12,12 @@
 
 #include "Character.hpp"
 
-Character::Character(std::string name) : name(name) {
+Character::Character() {
 	std::cout << "Character default constructor called" << std::endl;
+}
+
+Character::Character(std::string name) : _name(name) {
+	std::cout << "Character constructor for "<< name << " called" << std::endl;
 }
 
 Character::Character(const Character &ch) {
@@ -26,7 +30,7 @@ Character &Character::operator=(const Character &ch) {
 	std::cout << "Character = operator called" << std::endl;
 	if (this == &ch)
 		return *this;
-	this->name = ch.name;
+	this->_name = ch._name;
 //	this->inventory = ch.clone(); // clone all 4, not 1
 	return *this;
 }

@@ -14,7 +14,7 @@
 #define AMATERIA_HPP
 
 #include <iostream>
-#include "Character.hpp"
+#include "ICharacter.hpp"
 
 #define BLUE "\x1b[1;36m"
 #define YELLOW "\x1b[1;92m"
