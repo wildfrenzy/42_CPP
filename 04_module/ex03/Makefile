@@ -14,10 +14,10 @@ FLAGS = -Wall -Wextra -std=c++98
 #-Werror -g3 -fsanitize=address
 CC = c++
 
-NAME = Animal
+NAME = materia
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
-HEADER = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp Brain.cpp
+SRC = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp
+HEADER =  AMateria.hpp Character.hpp Cure.hpp Ice.hpp
 OBJ = $(SRC:.cpp=.o)
 
 # COLORS
