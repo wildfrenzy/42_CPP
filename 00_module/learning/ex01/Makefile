@@ -10,14 +10,15 @@
 #                                                                              #
 # **************************************************************************** #
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
-
+FLAGS = -Wall -Wextra -std=c++98
+# -Werror
 CC = c++
 
-NAME = Animal
+NAME = phonebook
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
-HEADER = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp Brain.cpp
+SRC = PhoneBook.cpp Contact.cpp main.cpp
+HEADER = PhoneBook.hpp Contact.hpp
+
 OBJ = $(SRC:.cpp=.o)
 
 # COLORS

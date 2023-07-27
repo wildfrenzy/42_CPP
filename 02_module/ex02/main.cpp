@@ -6,7 +6,7 @@
 /*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 16:29:26 by nmaliare          #+#    #+#             */
-/*   Updated: 2023/04/22 16:29:26 by nmaliare         ###   ########.fr       */
+/*   Updated: 2023/05/09 14:58:46 by nmaliare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,25 @@ int main( void ) {
 	std::cout << c << std::endl;
 	std::cout << d << std::endl;
 	std::cout << e << std::endl;
-
-	std::cout << "a: " << std::endl;
+	std::cout << "****" << std::endl;
+	std::cout << "[++]a: " << std::endl;
 	std::cout << a << std::endl;
 	std::cout << ++a << std::endl;
 	std::cout << a << std::endl;
 	std::cout << a++ << std::endl;
 	std::cout << a << std::endl;
-
+	std::cout << "****" << std::endl;
+	std::cout << "[--]a: " << std::endl;
+	std::cout << a << std::endl;
+	std::cout << --a << std::endl;
+	std::cout << a << std::endl;
+	std::cout << a-- << std::endl;
+	std::cout << a << std::endl;
+	std::cout << "****" << std::endl;
 	std::cout << b << std::endl;
+	std::cout << "****" << std::endl;
 	std::cout << Fixed::max(a, b) << std::endl;
+	std::cout << Fixed::min(a, b) << std::endl;
 
 	return 0;
 }

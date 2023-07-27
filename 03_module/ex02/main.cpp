@@ -42,11 +42,5 @@ int	main()
 	random.attack("Moulinette");
 	std::cout << std::endl;
 
-/*	std::cout << BLUE"Mouli" RES " stats:\nhealth: " << moulinette.getHealth()
-	<< "\nenergy: " << moulinette.getEnergy() << std::endl;
-
-	std::cout << BLUE"Student" RES " stats:\nhealth: " << student.getHealth()
-			  << "\nenergy: " << student.getEnergy() << std::endl;*/
-
 	return 0;
 }

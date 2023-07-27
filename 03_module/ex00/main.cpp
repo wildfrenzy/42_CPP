@@ -6,7 +6,7 @@
 /*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/27 20:46:17 by nmaliare          #+#    #+#             */
-/*   Updated: 2023/04/27 20:51:35 by nmaliare         ###   ########.fr       */
+/*   Updated: 2023/05/09 16:49:30 by nmaliare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,6 @@ int	main()
 	student.beRepaired(2);
 	student.takeDamage(10);
 	random.attack("Moulinette");
-
-	std::cout << BLUE"Mouli" RES " stats:\nhealth: " << moulinette.getHealth()
-	<< "\nenergy: " << moulinette.getEnergy() << std::endl;
-
-	std::cout << BLUE"Student" RES " stats:\nhealth: " << student.getHealth()
-			  << "\nenergy: " << student.getEnergy() << std::endl;
 
 	return 0;
 }

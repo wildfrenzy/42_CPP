@@ -6,7 +6,7 @@
 /*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 16:29:41 by nmaliare          #+#    #+#             */
-/*   Updated: 2023/04/22 19:06:54 by nmaliare         ###   ########.fr       */
+/*   Updated: 2023/05/09 14:40:29 by nmaliare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Fixed::~Fixed() {
 }
 Fixed::Fixed(const Fixed &num) {
 	std::cout<< "Copy constructor called" << std::endl;
-	this->_val = num.getRawBits(); // ?
+	this->_val = num.getRawBits();
 }
 
 Fixed &Fixed::operator=(const Fixed &num) {

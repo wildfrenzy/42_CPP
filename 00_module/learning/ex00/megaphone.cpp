@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/22 16:29:26 by nmaliare          #+#    #+#             */
-/*   Updated: 2023/04/27 19:46:20 by nmaliare         ###   ########.fr       */
+/*   Created: 2023/04/15 21:25:00 by nmaliare          #+#    #+#             */
+/*   Updated: 2023/04/15 21:25:08 by nmaliare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Point.hpp"
+#include <iostream>
+using namespace std;
 
-int main( void ) {
+int main(int ac, char *av[])
+{
+	int i, j;
 
-	Point const a(2, 2);
-	Point const b(5, 7);
-	Point const c(9, 4);
-	Point const p(5, 6);
-	Point const p2(-5, 6);
-
-	bsp(a, b, c , p) ? (std::cout << "ok" << std::endl) : (std::cout << "ko" << std::endl);
-	bsp(a, b, c , p2) ? (std::cout << "ok" << std::endl) : (std::cout << "ko" << std::endl);
-
+	i = 0;
+	if (ac == 1)
+		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+	else
+	{
+		while (++i < ac)
+		{
+			j = -1;
+			while (av[i][++j])
+				cout << (char)toupper(av[i][j]);
+		}
+	}
+	cout << endl;
 	return 0;
 }

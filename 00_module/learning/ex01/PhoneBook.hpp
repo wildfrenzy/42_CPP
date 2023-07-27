@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/28 19:11:07 by nmaliare          #+#    #+#             */
-/*   Updated: 2023/04/28 19:11:07 by nmaliare         ###   ########.fr       */
+/*   Created: 2023/04/15 22:19:56 by nmaliare          #+#    #+#             */
+/*   Updated: 2023/04/15 22:19:56 by nmaliare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DIAMONDTRAP_HPP
-#define DIAMONDTRAP_HPP
+#ifndef PHONEBOOK_HPP
+#define PHONEBOOK_HPP
 
-#include <iostream>
+#include "Contact.hpp"
 
-#include "FragTrap.hpp"
-#include "ScavTrap.hpp"
+class PhoneBook {
 
-class DiamondTrap : public virtual FragTrap, public virtual ScavTrap{
 public:
-	DiamondTrap();
-	~DiamondTrap();
-	DiamondTrap(const std::string &name);
-	DiamondTrap(const DiamondTrap &dia);
-	DiamondTrap& operator=(const DiamondTrap &dia);
 
-	void attack(const std::string &target);
-	void whoAmI();
+	PhoneBook(void);
+	~PhoneBook(void);
+
+	Contact &getContact(int i);
+	void setContact(Contact *contacts, std::string firstN, std::string lastN,
+					std::string nick, std::string phone, std::string secret);
+
 private:
-	std::string _name;
+	Contact _contacts[8];
 };
-
 
 #endif

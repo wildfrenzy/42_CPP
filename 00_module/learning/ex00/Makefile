@@ -14,10 +14,10 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 CC = c++
 
-NAME = Animal
+NAME = megaphone
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
-HEADER = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp Brain.cpp
+SRC = megaphone.cpp
+
 OBJ = $(SRC:.cpp=.o)
 
 # COLORS
@@ -28,11 +28,11 @@ BLUE        = \033[1;34m
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(HEADER)
+$(NAME): $(OBJ)
 	@$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 	@printf "$(GREEN)$(NAME) successfully compiled !$(NOC)\n"
 
-$(OBJ): %.o:%.cpp $(HEADER)
+$(OBJ): %.o:%.cpp
 	@$(CC) $(FLAGS) -c $< -o $@
 	@printf "$(GREEN)[\342\234\205] $(notdir $@)\n";
 

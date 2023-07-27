@@ -6,7 +6,7 @@
 /*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 16:10:16 by nmaliare          #+#    #+#             */
-/*   Updated: 2023/05/02 16:10:16 by nmaliare         ###   ########.fr       */
+/*   Updated: 2023/05/09 18:00:10 by nmaliare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ Dog::Dog() {
 	this->type = "Dog";
 }
 
-Dog::Dog(const Dog &cat) {
+Dog::Dog(const Dog &dog) {
 	std::cout<< "Dog copy constructor called" << std::endl;
-	if (this != &cat)
-		*this = cat;
+	if (this != &dog)
+		*this = dog;
 }
 
-Dog &Dog::operator=(const Dog &cat) {
-	if(this == &cat)
+Dog &Dog::operator=(const Dog &dog) {
+	if(this == &dog)
 		return *this;
 	this->type = "Dog";
 	return *this;

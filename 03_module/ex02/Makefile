@@ -10,8 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
-FLAGS = -Wall -Wextra -std=c++98
-#-Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98
+
 CC = c++
 
 NAME = FragTrap

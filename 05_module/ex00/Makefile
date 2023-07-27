@@ -5,19 +5,19 @@
 #                                                     +:+ +:+         +:+      #
 #    By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/03 15:53:14 by nmaliare          #+#    #+#              #
-#    Updated: 2022/04/03 19:12:00 by nmaliare         ###   ########.fr        #
+#    Created: 2022/07/27 15:53:14 by nmaliare          #+#    #+#              #
+#    Updated: 2022/07/03 19:12:00 by nmaliare         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
-
+FLAGS = -Wall -Wextra -std=c++98
+#-Werror -g3 -fsanitize=address
 CC = c++
 
-NAME = Animal
+NAME = Bureaucrat
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
-HEADER = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp Brain.cpp
+SRC = main.cpp Bureaucrat.cpp
+HEADER =  Bureaucrat.hpp
 OBJ = $(SRC:.cpp=.o)
 
 # COLORS

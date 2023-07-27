@@ -10,14 +10,15 @@
 #                                                                              #
 # **************************************************************************** #
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
-
+FLAGS = -Wall -Wextra -std=c++98
+# -Werror
 CC = c++
 
-NAME = Animal
+NAME = account
 
-SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
-HEADER = Animal.hpp Dog.hpp Cat.hpp WrongAnimal.hpp WrongCat.hpp Brain.cpp
+SRC = Account.cpp tests.cpp
+HEADER = Account.hpp
+
 OBJ = $(SRC:.cpp=.o)
 
 # COLORS
