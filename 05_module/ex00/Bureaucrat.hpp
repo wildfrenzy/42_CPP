@@ -14,6 +14,7 @@
 #define BUREAUCRAT_HPP
 
 #include <iostream>
+#include <exception>
 
 #define BLUE "\x1b[1;36m"
 #define YELLOW "\x1b[1;92m"
@@ -24,17 +25,24 @@ class Bureaucrat {
 
 public:
 	Bureaucrat();
-	Bureaucrat(std::string name);
-	Bureaucrat(const Bureaucrat &b);
-	Bureaucrat& operator=(const Bureaucrat &b);
+	Bureaucrat(const std::string &name, int grade);
+	Bureaucrat(Bureaucrat &b);
+	Bureaucrat& operator=(Bureaucrat &b);
 	~Bureaucrat();
 
-	std::string const &getName(void) const;
-	int &getGrade(void) const;
+	const std::string &getName(void) const;
+	int &getGrade(void);
 	void incrementGrade(void);
 	void decrementGrade(void);
 
-	Bureaucrat operator<<(const Bureaucrat &b) const; //?
+	class GradeTooHighException : public std::exception{
+	public:
+		const char* what() const throw();
+	};
+	class GradeTooLowException : public std::exception{
+	public:
+		const char* what() const throw();
+	};
 
 private:
 	const std::string _name;
@@ -42,5 +50,6 @@ private:
 
 };
 
+std::ostream & operator<<(std::ostream &o, Bureaucrat &b);
 
 #endif
