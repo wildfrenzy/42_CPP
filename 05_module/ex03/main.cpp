@@ -21,6 +21,7 @@ int  main(void)
 		AForm*   rrf;
 		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 		std::cout << rrf->getName() << std::endl;
+		delete rrf;
 	}
 	{
 		Intern  someRandomIntern;
