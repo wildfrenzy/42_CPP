@@ -25,7 +25,9 @@ int main (int ac, char *av[])
 
 		exchange.readInput(av[1]);
 	}
-	catch (std::exception &e){}
+	catch (std::exception &e){
+		std::cout << e.what() << std::endl;
+	}
 
 
 	return 0;
