@@ -29,25 +29,31 @@ int main()
 		std::cout << YELLOW "Caught exception: " RES << e.what() << std::endl;
 	}
 	Bureaucrat third("Bocal", 42);
-	Form test1("CEO Form", 42, 42);
-	Form test2("Bocal Form", 42, 42);
-	std::cout << test1 << std::endl;
-	std::cout << test2 << std::endl;
 
 	try {
+		Form test1("CEO Form", 166, 42);
+		std::cout << test1 << std::endl;
+
 		std::cout << first.getName() << " " << first.getGrade() <<std::endl;
 		test1.beSigned(first);
+
+		first.signForm(test1.getName(), test1.getSignature());
+	} catch (std::exception const &e)
+	{
+		std::cout << YELLOW "CEO Caught exception: " RES << e.what() << std::endl;
 	}
-	catch (std::exception const &e){
-		std::cout << YELLOW "Caught exception: " RES << e.what() << std::endl;
-	}
+
 	try {
+		Form test2("Bocal Form", 42, 42);
+		std::cout << test2 << std::endl;
+
 		std::cout << third.getName() << " " << third.getGrade() << std::endl;
 		test2.beSigned(third);
+
+		third.signForm(test2.getName(), test2.getSignature());
+	} catch (std::exception const &e)
+	{
+		std::cout << YELLOW "Bocal Caught exception: " RES << e.what() << std::endl;
 	}
-	catch (std::exception const &e){
-		std::cout << YELLOW "Caught exception: " RES << e.what() << std::endl;
-	}
-	first.signForm(test1.getName(), test1.getSignature());
-	third.signForm(test2.getName(), test2.getSignature());
+
 }

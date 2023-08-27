@@ -6,7 +6,7 @@
 /*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/27 19:57:19 by nmaliare          #+#    #+#             */
-/*   Updated: 2023/07/27 19:57:19 by nmaliare         ###   ########.fr       */
+/*   Updated: 2023/08/27 18:09:55 by nmaliare         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name){
 	std::cout<< BLUE"Constructor for "YELLOW<< this->_name <<RES" called" << std::endl;
 	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
-	else if (grade > 150)
+	if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
 	else
 		this->_grade = grade;
