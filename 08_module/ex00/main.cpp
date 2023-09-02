@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/02 19:00:03 by nmaliare          #+#    #+#             */
+/*   Updated: 2023/09/02 19:00:03 by nmaliare         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <list>
 #include <vector>
 #include "easyfind.hpp"
@@ -15,13 +27,13 @@ int		main(void)
 		try
 		{
 			::easyfind(numbers, 1);
-			std::cout << "Number in list<int>" << std::endl;
+			std::cout << "Number is in list<int>" << std::endl;
 			::easyfind(numbers, 4);
-			std::cout << "Number in list<int>" << std::endl;
+			std::cout << "Number is in list<int>" << std::endl;
 			::easyfind(numbers, 3);
-			std::cout << "Number in list<int>" << std::endl;
+			std::cout << "Number is in list<int>" << std::endl;
 			::easyfind(numbers, 7);
-			std::cout << "Number in list<int>" << std::endl;
+			std::cout << "Number is in list<int>" << std::endl;
 		}
 		catch (std::exception const &e)
 		{
