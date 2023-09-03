@@ -1,6 +1,14 @@
-//
-// Created by Nadiia Maliarenko on 01.08.23.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/01 18:24:21 by nmaliare          #+#    #+#             */
+/*   Updated: 2023/08/01 18:24:21 by nmaliare         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "PresidentialPardonForm.hpp"
 #include "Bureaucrat.hpp"

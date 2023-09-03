@@ -1,6 +1,14 @@
-//
-// Created by Nadiia Maliarenko on 03.08.23.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Intern.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/03 18:21:27 by nmaliare          #+#    #+#             */
+/*   Updated: 2023/08/03 18:21:27 by nmaliare         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Intern.hpp"
 #include "PresidentialPardonForm.hpp"
@@ -14,17 +22,10 @@ Intern::Intern(Intern &i) {
 }
 Intern::~Intern() {}
 
-Intern &Intern::operator=(Intern &i) { // ???
+Intern &Intern::operator=(Intern &i) {
 	(void)i;
 	return *this;
 }
-
-/*
-template <class X> AForm* make()
-{
-	return new X();
-}
-*/
 
 AForm *makeRobo(std::string target)
 {
@@ -44,8 +45,6 @@ AForm *makeShrubbery(std::string target)
 AForm *Intern::makeForm(std::string name, std::string target) {
 
 	AForm *created = NULL;
-	//typedef AForm* FormMaker();
-	//FormMaker *makers[3] = {make<RobotomyRequestForm>, make<PresidentialPardonForm>, make<ShrubberyCreationForm>};
 
 	std::string forms[3] = {"robotomy request", "presidential pardon", "shrubbery creation"};
 	AForm *(*f[3])(std::string target) = {makeRobo, makePresident, makeShrubbery};
@@ -54,7 +53,6 @@ AForm *Intern::makeForm(std::string name, std::string target) {
 	while (++i <= 2)
 		if (forms[i] == name)
 		{
-			//created = makers[i]();
 			created = f[i](target);
 			std::cout << "Intern creates " + name << std::endl;
 			break ;

@@ -1,6 +1,14 @@
-//
-// Created by Nadiia Maliarenko on 06.08.23.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Span.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/08/06 17:04:07 by nmaliare          #+#    #+#             */
+/*   Updated: 2023/09/02 18:59:18 by nmaliare         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Span.hpp"
 #include <exception>
@@ -46,24 +54,28 @@ void Span::addNumber(unsigned int start, unsigned int end) {
 			this->_arr[i] = std::rand() / 1000000;
 		_len += end - start + 1;
 
-//		for (unsigned int i = 0; i < end; ++i) {
-//			std::cout << "[ " << this->_arr[i] << " ]" ;
-//		}
-//		std::cout << std::endl;
-
 	} else throw std::exception();
 }
 
 unsigned int Span::longestSpan() {
-	std::pair<int *, int *> mnmx = std::minmax_element(&(this->_arr[0]), (this->_arr + this->_len));
-	return *mnmx.second - *mnmx.first;
+	if (_len > 1)
+	{
+		int *min = std::min_element(&(this->_arr[0]), (this->_arr + this->_len));
+		int *max = std::max_element(&(this->_arr[0]), (this->_arr + this->_len));
+		return min - max;
+	}
+	else throw std::exception();
 }
 
 unsigned int Span::shortestSpan() {
-	std::sort(this->_arr, this->_arr + this->_len, std::greater<int>());
-	int *tmp = new int[this->_len];
-	std::transform(this->_arr, this->_arr + this->_len, this->_arr + 1,tmp, std::minus<int>());
-	int min = *std::min_element(tmp, tmp + this->_len - 1);
-	delete [] tmp;
-	return min;
+	if (_len > 1)
+	{
+		std::sort(this->_arr, this->_arr + this->_len, std::greater<int>());
+		int *tmp = new int[this->_len];
+		std::transform(this->_arr, this->_arr + this->_len, this->_arr + 1,tmp, std::minus<int>());
+		int min = *std::min_element(tmp, tmp + this->_len - 1);
+		delete [] tmp;
+		return min;
+	}
+	else throw std::exception();
 }

@@ -20,7 +20,7 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name){
 	std::cout<< BLUE"Constructor for "YELLOW<< this->_name <<RES" called" << std::endl;
 	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
-	else if (grade > 150)
+	if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
 	else
 		this->_grade = grade;
