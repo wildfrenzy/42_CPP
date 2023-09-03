@@ -6,7 +6,7 @@
 #define RPN_HPP
 
 #include <iostream>
-#include <vector>
+#include <stack>
 
 class RPN {
 public:
@@ -20,7 +20,7 @@ public:
 
 private:
 	bool isToken(char c);
-	std::vector<int> _numbers;
+	std::stack<int> _numbers;
 };
 
 

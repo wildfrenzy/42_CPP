@@ -25,28 +25,28 @@ void RPN::readInput(const std::string &av) {
 
 	for (char c = 0; ss >> c;) {
 		if (isdigit(c))
-			this->_numbers.push_back(c - 48);
+			this->_numbers.push(c - 48);
 		else if (isToken(c)){
-			res = this->_numbers.back();
-			this->_numbers.pop_back();
+			res = this->_numbers.top();
+			this->_numbers.pop();
 			switch (c) {
 				case '+':
-					res += this->_numbers.back();
+					res += this->_numbers.top();
 					break;
 				case '-':
-					res = this->_numbers.back() - res;
+					res = this->_numbers.top() - res;
 					break;
 				case '*':
-					res *= this->_numbers.back();
+					res *= this->_numbers.top();
 					break;
 				case '/':
-					res = this->_numbers.back() / res;
+					res = this->_numbers.top() / res;
 					break;
 				default:
 					std::cout << "hi :)" << std::endl;
 			}
-			this->_numbers.pop_back();
-			this->_numbers.push_back(res);
+			this->_numbers.pop();
+			this->_numbers.push(res);
 		}
 		else
 			throw std::invalid_argument("Error");
@@ -60,5 +60,5 @@ bool RPN::isToken(char c) {
 void RPN::printResult() {
 	if (this->_numbers.size() > 1)
 		throw std::invalid_argument("Error");
-	std::cout << this->_numbers.back() << std::endl;
+	std::cout << this->_numbers.top() << std::endl;
 }

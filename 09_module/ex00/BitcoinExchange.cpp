@@ -15,9 +15,6 @@ BitcoinExchange::BitcoinExchange() {
 
 	BitcoinExchange::readData(ifs, this->_data);
 
-	//Todo:
-	// 4. do output
-
 }
 
 BitcoinExchange::BitcoinExchange(BitcoinExchange &b) {
