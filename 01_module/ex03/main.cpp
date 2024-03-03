@@ -17,6 +17,9 @@ int main() {
 	clubb.setType("some other type of club");
 	jim.attack();
 
+	HumanB j("J");
+	j.attack();
+
 	return 0;
 
 }

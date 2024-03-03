@@ -1,21 +1,24 @@
-//
-// Created by Nadiia Maliarenko on 19.04.23.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/09 13:35:00 by nmaliare          #+#    #+#             */
+/*   Updated: 2023/05/09 13:53:45 by nmaliare         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-Weapon::Weapon(std::string type) : _type(type)  {
-//	std::cout << "> Weapon " << _type << " created" << std::endl;
-}
+Weapon::Weapon(const std::string &type) : _type(type)  {}
+Weapon::~Weapon() {}
 
-Weapon::~Weapon() {
-	//std::cout << "> Destructor for " << getType() << " called" << std::endl;
-}
-
-std::string Weapon::getType() const {
+const std::string& Weapon::getType() const {
 	return this->_type;
 }
 
-void Weapon::setType(std::string newtype) {
+void Weapon::setType(const std::string &newtype) {
 	this->_type = newtype;
 }

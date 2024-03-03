@@ -1,9 +1,17 @@
-//
-// Created by nmaliare on 4/18/23.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/09 13:35:00 by nmaliare          #+#    #+#             */
+/*   Updated: 2023/05/09 13:35:00 by nmaliare         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#ifndef CPP_ZOMBIE_HPP
-#define CPP_ZOMBIE_HPP
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 #include <iostream>
 
 class Zombie {
