@@ -1,3 +1,0 @@
-Using C file manipulation functions is forbidden and will be considered cheating. All
-the member functions of the class std::string are allowed, except replace. Use them
-wisely!

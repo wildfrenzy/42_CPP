@@ -1,22 +1,26 @@
-//
-// Created by Nadiia Maliarenko on 19.04.23.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/09 13:35:00 by nmaliare          #+#    #+#             */
+/*   Updated: 2023/05/09 13:35:00 by nmaliare         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string name, Weapon& type) : _name(name), _weapon(type) {
+HumanA::HumanA(const std::string& name,Weapon& type) : _name(name), _weapon(type) {}
 
-}
+HumanA::~HumanA() {}
 
-HumanA::~HumanA() {
-	//std::cout << "Destructor called" << std::endl;
-}
-
-std::string HumanA::getName() const {
+const std::string &HumanA::getName() const {
 	return this->_name;
 }
 
-Weapon HumanA::getWeapon() const {
+const Weapon& HumanA::getWeapon() const {
 	return this->_weapon;
 }
 

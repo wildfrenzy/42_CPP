@@ -43,22 +43,22 @@ std::string Contact::getSecret() const {
 
 int Contact::_index = 0;
 
-void Contact::setFirstName(std::string first) {
+void Contact::setFirstName(const std::string &first) {
 	this->_first_name = first;
 }
 
-void Contact::setLastName(std::string last) {
+void Contact::setLastName(const std::string &last) {
 	this->_last_name = last;
 }
 
-void Contact::setNickname(std::string nickname) {
+void Contact::setNickname(const std::string &nickname) {
 	this->_nickname = nickname;
 }
 
-void Contact::setSecret(std::string secret) {
+void Contact::setSecret(const std::string &secret) {
 	this->_secret = secret;
 }
 
-void Contact::setPhone(std::string phone) {
+void Contact::setPhone(const std::string &phone) {
 	this->_phone = phone;
 }

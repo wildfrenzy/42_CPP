@@ -1,6 +1,14 @@
-//
-// Created by Nadiia Maliarenko on 19.04.23.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/09 13:35:00 by nmaliare          #+#    #+#             */
+/*   Updated: 2023/05/09 13:35:00 by nmaliare         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef HUMANB_HPP
 #define HUMANB_HPP
@@ -10,11 +18,11 @@
 class HumanB {
 public:
 
-	HumanB(std::string name);
+	HumanB(const std::string &name);
 	~HumanB();
 
 	void		attack();
-	std::string	getName() const;
+	const std::string&	getName() const;
 	Weapon*		getWeapon() const;
 	void		setWeapon(Weapon& type);
 

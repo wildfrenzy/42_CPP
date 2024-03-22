@@ -28,11 +28,11 @@ public:
 	std::string getPhone() const;
 	std::string getSecret() const;
 
-	void setFirstName(std::string first);
-	void setLastName(std::string last);
-	void setNickname(std::string nickname);
-	void setPhone(std::string phone);
-	void setSecret(std::string secret);
+	void setFirstName(const std::string &first);
+	void setLastName(const std::string &last);
+	void setNickname(const std::string &nickname);
+	void setPhone(const std::string &phone);
+	void setSecret(const std::string &secret);
 
 private:
 	static int	_index;

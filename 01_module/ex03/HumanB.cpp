@@ -1,14 +1,22 @@
-//
-// Created by Nadiia Maliarenko on 19.04.23.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/09 13:35:00 by nmaliare          #+#    #+#             */
+/*   Updated: 2023/05/09 13:35:00 by nmaliare         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : _name(name) {}
+HumanB::HumanB(const std::string& name) : _name(name) {}
 
 HumanB::~HumanB() {}
 
-std::string HumanB::getName() const {
+const std::string& HumanB::getName() const {
 	return this->_name;
 }
 
@@ -21,5 +29,5 @@ void HumanB::setWeapon(Weapon& type) {
 }
 
 void HumanB::attack() {
-	std::cout << getName() << " attacks with their " << getWeapon()->getType() << std::endl;
+	std::cout << getName() << " attacks with their " << (getWeapon() ? getWeapon()->getType() : "NULL") << std::endl;
 }

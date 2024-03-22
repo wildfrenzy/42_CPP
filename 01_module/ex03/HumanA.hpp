@@ -1,6 +1,14 @@
-//
-// Created by Nadiia Maliarenko on 19.04.23.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nmaliare <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/05/09 13:35:00 by nmaliare          #+#    #+#             */
+/*   Updated: 2023/05/09 13:35:00 by nmaliare         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef HUMANA_HPP
 #define HUMANA_HPP
@@ -10,12 +18,12 @@ class HumanA {
 
 public:
 
-	HumanA(std::string name, Weapon& type);
+	HumanA(const std::string& name,Weapon& type);
 	~HumanA();
 
 	void		attack();
-	std::string	getName() const;
-	Weapon		getWeapon() const;
+	const std::string&	getName() const;
+	const Weapon&		getWeapon() const;
 
 private:
 	std::string	_name;

@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include <iostream>
-using namespace std;
 
 int main(int ac, char *av[])
 {
@@ -19,16 +18,16 @@ int main(int ac, char *av[])
 
 	i = 0;
 	if (ac == 1)
-		cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else
 	{
 		while (++i < ac)
 		{
 			j = -1;
 			while (av[i][++j])
-				cout << (char)toupper(av[i][j]);
+				std::cout << (char)toupper(av[i][j]);
 		}
 	}
-	cout << endl;
+	std::cout << std::endl;
 	return 0;
 }
